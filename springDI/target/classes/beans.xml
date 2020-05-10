@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="PaymentBean" class="springIOC.Payment" autowire="byName">
+		<property name="action" value="buy" />
+		<property name="type" value="1" />
+	</bean>
+
+	<bean id="UPIPayment" class="springIOC.UPIPay">
+		<property name="name" value="UPIPayment" />
+		<property name="address" value="address ABC" />
+		<property name="age" value="30" />
+	</bean>
+
+	<bean id="WalletPayment" class="springIOC.WalletPayment">
+		<property name="name" value="WalletPayment" />
+		<property name="address" value="address ABC" />
+		<property name="age" value="29" />
+	</bean>
+
+
+
+		<!--  <bean id="PaymentBean" class="springIOC.Payment">
+	
+		<constructor-arg type="java.lang.String">
+			<value>GITAM</value>
+		</constructor-arg>
+		
+		<constructor-arg type="java.lang.String">
+			<value>150</value>
+		</constructor-arg>
+		
+		<constructor-arg type="int">
+			<value>28</value>
+		</constructor-arg>
+		
+	</bean>-->
+
+</beans>
